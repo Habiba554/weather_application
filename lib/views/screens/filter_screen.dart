@@ -64,7 +64,7 @@ class FilterScreen extends StatelessWidget {
                       .format(DateTime.parse(item.dtTxt!));
                   return ListTile(
                     title: Text(
-                      '${(item.main!.temp! - 273.15).round().toString()}\u2103',
+                      '${(item.main!.temp - 273.15).round().toString()}\u2103',
                       style: AppStyle.poppins400style16
                           .copyWith(color: theme.secondaryHeaderColor),
                     ),

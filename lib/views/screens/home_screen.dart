@@ -16,7 +16,7 @@ class HomeBody extends StatelessWidget {
               builder: (context, weatherProvider, child) {
                 if (weatherProvider.currentWeatherData != null) {
                   return Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(8.0),
                     child: WeatherCardInformation(
                         weatherData: weatherProvider.currentWeatherData!),
                   );

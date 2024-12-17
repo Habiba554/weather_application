@@ -17,7 +17,7 @@ class WeatherCardInformation extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(15),
       width: double.infinity,
-      height: mediaQuery.size.height * 0.4,
+      height: mediaQuery.size.height * 0.5,
       child: Card(
         color: theme.indicatorColor,
         elevation: 5,
@@ -28,7 +28,7 @@ class WeatherCardInformation extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -65,7 +65,7 @@ class WeatherCardInformation extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding: const EdgeInsets.all(30),
+                  padding: const EdgeInsets.all(10),
                   child: Column(
                     children: [
                       Text(
@@ -75,12 +75,12 @@ class WeatherCardInformation extends StatelessWidget {
                       ),
                       const SizedBox(height: 15),
                       Text(
-                        '${(weatherData.main!.temp! - 273.15).round().toString()}\u2103',
+                        '${(weatherData.main!.temp - 273.15).round().toString()}\u2103',
                         style: AppStyle.poppins400style14
                             .copyWith(color: theme.textTheme.bodyLarge?.color),
                       ),
                       Text(
-                        'min: ${(weatherData.main!.tempMin! - 273.15).round().toString()}\u2103 / max: ${(weatherData.main!.tempMax! - 273.15).round().toString()}\u2103',
+                        'min: ${(weatherData.main!.tempMin - 273.15).round().toString()}\u2103 / max: ${(weatherData.main!.tempMax - 273.15).round().toString()}\u2103',
                         style: AppStyle.poppins400style14
                             .copyWith(color: theme.textTheme.bodyLarge?.color),
                       ),
@@ -88,7 +88,7 @@ class WeatherCardInformation extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.all(10),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
