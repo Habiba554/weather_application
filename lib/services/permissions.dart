@@ -36,7 +36,7 @@ class ModularPermissionManager {
   }
 
   /// Download movie on mobile
-  Future<void> downloadMovieMobile({
+  Future<void> downloaddownloadCityNameMobile({
     required BuildContext context,
     required String name,
   }) async {
@@ -79,7 +79,7 @@ class ModularPermissionManager {
   }
 
   /// Download movie on web
-  Future<void> downloadMovieWeb(String name) async {
+  Future<void> downloaddownloadCityNameWeb(String name) async {
     try {
       final bytes = utf8.encode(name);
       final blob = html.Blob([bytes]);
@@ -117,14 +117,14 @@ class ModularPermissionManager {
   }
 
   /// Unified download method
-  Future<void> downloadMovie({
+  Future<void> downloadCityName({
     required BuildContext context,
     required String name,
   }) async {
     if (kIsWeb) {
-      await downloadMovieWeb(name);
+      await downloaddownloadCityNameWeb(name);
     } else {
-      await downloadMovieMobile(
+      await downloaddownloadCityNameMobile(
           context: context,
           name: name);
     }

@@ -74,10 +74,10 @@ class SearchScreen extends StatelessWidget {
                         Semantics(
                           button: true,
                           label:
-                              "Download button for the movie ${weatherProvider.currentWeatherData?.name}",
+                              "Download button for the city name ${weatherProvider.currentWeatherData?.name}",
                           child: CustomElevatedButton(
                             text: context.translate(AppStrings.download),
-                            onPressed: () => permissionManager.downloadMovie(
+                            onPressed: () => permissionManager.downloadCityName(
                                 context: context,
                                 name: weatherProvider.currentWeatherData!.name!),
                             backgroundColor: theme.secondaryHeaderColor,
