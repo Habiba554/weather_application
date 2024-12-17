@@ -49,7 +49,7 @@ class LoginScreen extends StatelessWidget {
                       keyboardType: TextInputType.emailAddress,
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please Enter your username or email';
+                          return 'Please Enter your email';
                         }
                         return null;
                       },

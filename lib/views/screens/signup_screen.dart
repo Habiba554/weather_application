@@ -62,8 +62,8 @@ class SignupScreen extends StatelessWidget {
                     validator: (value) {
                       if (value == null || value.isEmpty) {
                         return 'Please Enter your Password';
-                      } else if (value.length < 4 || value.length > 20) {
-                        return "Password should be from 3 to 20 characters";
+                      } else if (value.length < 8) {
+                        return "Password should be from 8 to 20 characters";
                       }
                       return null;
                     },
